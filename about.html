@@ -1,0 +1,44 @@
+---
+title: About
+description: the past, present, and future of this website
+layout: default
+permalink: /about/
+---
+
+<section class="wrapper style5">
+    <div class="inner">
+        <h3>The Basics</h3>
+        <p><strong>Pugchamp</strong> was conceived in 2015 as a successor to <em>tf2pug.me</em>, a similar web-based draft-organized PUG system. It aimed to not only recreate the same functionality but add to it with features like ratings and automated servers.</p>
+        
+    </div>
+</section>
+<section class="wrapper style1">
+    <div class="inner">
+        <h3>Staff</h3>
+
+        {% for group in site.data.staff %}
+            <h4>{{group.group}}</h4>
+
+            <ul class="alt">
+                {% for member in group.members %}
+                    <li><em>{{member.name}}</em>, {{member.title}}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</section>
+<section class="wrapper style3">
+    <div class="inner">
+        <h3>Support</h3>
+        <ul class="actions">
+            
+            
+            <li><a href="http://steamcommunity.com/id/11flat" class="button special icon fa-steam">Items</a></li>
+            <li><a href="mailto:zaid.ahmad211@gmail.com" class="button special icon">Other</a></li>
+        </ul>
+
+        <h4>Sponsors</h4>
+        <span class="image"><img src="{{ "/assets/img/sponsors/tragicservers.png" | prepend: site.baseurl }}" alt="" /></span>
+        <span class="image"><img src="{{ "/assets/img/sponsors/fakkelbrigade.jpg" | prepend: site.baseurl }}" alt="" /></span>
+    </div>
+</section>
